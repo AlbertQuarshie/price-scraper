@@ -20,3 +20,5 @@ for book in books[:10]:
         "Title": title,
         "Price_GBP": price
     })
+
+rate_api = "https://api.exchangerate-api.com/v4/latest/GBP"
