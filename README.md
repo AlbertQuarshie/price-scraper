@@ -83,7 +83,10 @@ books.csv
 
 - Converts product prices using a free exchange rate API.
 
-## 3. Data Storage
+## 3. Timestamp
+- Adds a timestamp to whenever the code is executed
+
+## 4. Data Storage
 
 - Saves scraped and converted data into a CSV file using pandas.
 
@@ -103,4 +106,6 @@ books.csv
 - **Web Scraping:** BeautifulSoup, requests
 - **Data Handling:** pandas
 - **Currency API:** ExchangeRate-API
+- **Timestamp:** Timestamp
+- **Tabulation:** Tabulate
 - **Execution Environment:** Console / Terminal
