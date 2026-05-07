@@ -4,6 +4,9 @@ import pandas as pd
 from datetime import datetime
 from tabulate import tabulate
 
+
+currency = input("Enter currency (e.g. KES, USD, EUR): ").upper()
+
 url ="https://books.toscrape.com/"
 response=requests.get(url)
 
@@ -24,10 +27,10 @@ for book in books[:10]:
     })
 
 rate_api = "https://api.exchangerate-api.com/v4/latest/GBP"
-rate = requests.get(rate_api).json()["rates"]["KES"]
+rate = requests.get(rate_api).json()["rates"][currency]
 
 for item in data:
-    item["Price_KES"] = round(item["Price_GBP"] * rate, 2)
+    item["Price_{currency}"] = round(item["Price_GBP"] * rate, 2)
 
 df = pd.DataFrame(data)
 
