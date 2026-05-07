@@ -37,6 +37,11 @@ for item in data:
 
 df = pd.DataFrame(data)
 
-print(df)
+
+print(tabulate(df, headers="keys", tablefmt="grid"))
+
 
 df.to_csv("books.csv", index=False)
+
+
+print("\nData saved to books.csv")
