@@ -1,6 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
+from datetime import datetime
+from tabulate import tabulate
 
 url ="https://books.toscrape.com/"
 response=requests.get(url)
