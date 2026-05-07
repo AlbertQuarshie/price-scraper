@@ -29,8 +29,11 @@ for book in books[:10]:
 rate_api = "https://api.exchangerate-api.com/v4/latest/GBP"
 rate = requests.get(rate_api).json()["rates"][currency]
 
+timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
 for item in data:
     item["Price_{currency}"] = round(item["Price_GBP"] * rate, 2)
+    item["Timestamp"]= timestamp
 
 df = pd.DataFrame(data)
 
